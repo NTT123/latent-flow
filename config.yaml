@@ -1,0 +1,36 @@
+ae_model_name: "mit-han-lab/dc-ae-f32c32-in-1.0-diffusers"
+model:
+  input_size: 8
+  in_channels: 32
+  hidden_size: 1024
+  depth: 4
+  num_heads: 16
+  mlp_ratio: 4.0
+optimization:
+  global_batch_size: 1024
+  learning_rate: 1.0e-3
+  min_lr: 1.0e-5
+  warmup_iters: 10000
+  lr_decay_iters: 1000000
+  decay_lr: true
+  weight_decay: 0.0
+  max_grad_norm: 20.0
+  betas:
+    beta1: 0.9
+    beta2: 0.95
+data:
+  data_path: data/latents_256.pt
+  data_mean: 0.0
+  data_std: 4.0
+  normalize: true
+training:
+  enable_compile: true
+  use_bfloat16: true
+  seed: 42
+  ckpt_every: 10_000
+  log_every: 100
+  results_dir: results/latent-flow-256
+  resume_from_ckpt: null
+  wandb:
+    enable: true
+    project: latent-flow
