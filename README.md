@@ -4,7 +4,7 @@ This repo provides a simple implementation of a latent flow matching model to ge
 
 ## Train model
 
-We are going to use the [CelebA-HQ (256x256)](https://www.kaggle.com/datasets/badasstechie/celebahq-resized-256x256) as our dataset.
+We are going to use the [CelebA-HQ (256x256)](https://www.kaggle.com/datasets/badasstechie/celebahq-resized-256x256) dataset.
 
 ```bash
 pip install uv
@@ -24,12 +24,4 @@ Now we can train the model using the `train.py` script.
 
 ```bash
 uv run train.py --config config.yaml
-```
-
-## Generate images
-
-We can generate images using the `generate.py` script.
-
-```bash
-uv run generate.py --config config.yaml
 ```
