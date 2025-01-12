@@ -25,3 +25,7 @@ Now we can train the model using the `train.py` script.
 ```bash
 uv run train.py --config config.yaml
 ```
+
+The following are samples after 400,000 training steps:
+
+![image](https://github.com/user-attachments/assets/86fbf9e7-aceb-457c-a7f9-b2136985e1fa)
